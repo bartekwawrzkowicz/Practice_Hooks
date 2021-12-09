@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+
+import Header from './components/Header';
+import Hero from './components/Hero';
+import Footer from './components/Footer';
+import { MainContext } from './context/MainContext';
+
+const API = 'https://api.tvmaze.com/shows';
+
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    axios
+      .get(API)
+      .then(res => console.log(res))
+      .catch(err => console.log(err))
+
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 2000);
+
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MainContext.Provider value={{ isLoading, setIsLoading }} >
+      <Header />
+      <Hero />
+      <Footer />
+    </MainContext.Provider>
   );
 }
 
