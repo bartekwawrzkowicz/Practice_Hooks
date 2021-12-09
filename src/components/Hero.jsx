@@ -1,13 +1,12 @@
 import LoadingMessage from '../components/LoadingMessage';
+import MovieList from '../components/MovieList';
 
 import '../layout/layout.scss';
 
 const Hero = () => {
     return (
         <div className="hero">
-            <p className="hero__text">
-                Hero
-            </p>
+            <MovieList />
             <LoadingMessage />
         </div>
     );

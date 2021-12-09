@@ -10,25 +10,26 @@ const API = 'https://api.tvmaze.com/shows';
 
 
 function App() {
+  const [movieList, setMovieList] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     axios
       .get(API)
-      .then(res => console.log(res))
+      .then(res => res.data)
+      .then(data => setMovieList(data))
       .catch(err => console.log(err))
 
-    setTimeout(() => {
-      setIsLoading(false)
-    }, 2000);
-
+    setIsLoading(false)
   }, []);
 
   return (
-    <MainContext.Provider value={{ isLoading, setIsLoading }} >
-      <Header />
-      <Hero />
-      <Footer />
+    <MainContext.Provider value={{ isLoading, movieList }} >
+      <div className="row">
+        <Header />
+        <Hero />
+        <Footer />
+      </div>
     </MainContext.Provider>
   );
 }

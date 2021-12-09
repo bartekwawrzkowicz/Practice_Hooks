@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <div className="footer">
             <p className="footer__text">
-                Footer
+                {/* Footer */}
             </p>
         </div>
     );

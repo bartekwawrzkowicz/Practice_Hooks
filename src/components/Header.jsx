@@ -1,10 +1,13 @@
 import '../layout/layout.scss';
 
 const Header = () => {
+
+    const text = 'Movie Database';
+
     return (
         <div className="header">
             <p className="header__text">
-                Header
+                {text}
             </p>
         </div>
     );
