@@ -25,11 +25,9 @@ function App() {
 
   return (
     <MainContext.Provider value={{ isLoading, movieList }} >
-      <div className="row">
-        <Header />
-        <Hero />
-        <Footer />
-      </div>
+      <Header />
+      <Hero />
+      <Footer />
     </MainContext.Provider>
   );
 }

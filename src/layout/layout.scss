@@ -21,7 +21,8 @@ $font-color: rgb(34, 34, 34);
 }
 
 .hero {
-  height: 50vh;
+  max-width: 800px;
+  height: auto;
   min-height: 20vh;
 
   & img {
@@ -37,12 +38,7 @@ $font-color: rgb(34, 34, 34);
 .list {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-}
-
-.row {
-  display: flex;
-  flex-direction: column;
+  justify-content: space-between;
 }
 
 .item {
@@ -74,5 +70,19 @@ $font-color: rgb(34, 34, 34);
   &__rating {
     font-size: 1.2rem;
     font-weight: 900;
+  }
+
+  & a {
+    color: rgb(214, 214, 214);
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 0;
+    transition: 0.5s;
+
+    &:hover {
+      color: white;
+      transform: scaleX(1.02) scaleY(1.02);
+      transition: 0.5s;
+    }
   }
 }

@@ -21,6 +21,7 @@ const MovieItem = () => {
                     <div className="item__rating">
                         rating: {item.rating.average}
                     </div>
+                    <a href={item.url}>read more...</a>
                 </div>
             )
 
