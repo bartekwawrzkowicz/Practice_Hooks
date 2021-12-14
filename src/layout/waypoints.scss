@@ -1,0 +1,22 @@
+$small-mobile: (
+  max-width: 599px,
+);
+
+$large-mobile: (
+  min-width: 600px,
+  max-width: 899px,
+);
+
+$tablet-landscape: (
+  min-width: 900px,
+  max-width: 1199px,
+);
+
+$desktop: (
+  min-width: 1200px,
+  max-width: 1799px,
+);
+
+$big-desktop: (
+  min-width: 1800px,
+);

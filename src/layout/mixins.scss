@@ -1,0 +1,29 @@
+@mixin small-mobile {
+  @media ($small-mobile) {
+    @content;
+  }
+}
+
+@mixin large-mobile {
+  @media ($large-mobile) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape {
+  @media ($tablet-landscape) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media ($desktop) {
+    @content;
+  }
+}
+
+@mixin big-desktop {
+  @media ($big-desktop) {
+    @content;
+  }
+} ;
